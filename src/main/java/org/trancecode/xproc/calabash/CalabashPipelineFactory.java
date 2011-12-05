@@ -17,6 +17,10 @@
  */
 package org.trancecode.xproc.calabash;
 
+import com.xmlcalabash.core.XProcConfiguration;
+import com.xmlcalabash.core.XProcConstants;
+import com.xmlcalabash.core.XProcRuntime;
+
 import javax.xml.transform.Source;
 
 import org.trancecode.xproc.api.Pipeline;
@@ -30,6 +34,9 @@ public final class CalabashPipelineFactory extends PipelineFactory
     @Override
     public Pipeline newPipeline(final Source pipelineSource)
     {
+        final XProcConfiguration configuration = new XProcConfiguration();
+        final XProcRuntime runtime = new XProcRuntime(configuration);
+
         // TODO CalabashPipelineFactory.newPipeline()
         throw new UnsupportedOperationException();
     }
@@ -37,42 +44,36 @@ public final class CalabashPipelineFactory extends PipelineFactory
     @Override
     public String getVersion()
     {
-        // TODO CalabashPipelineFactory.getVersion()
-        throw new UnsupportedOperationException();
+        return XProcConstants.XPROC_VERSION;
     }
 
     @Override
     public String getXProcVersion()
     {
-        // TODO CalabashPipelineFactory.getXProcVersion()
-        throw new UnsupportedOperationException();
+        return "1.0";
     }
 
     @Override
     public String getXPathVersion()
     {
-        // TODO CalabashPipelineFactory.getXPathVersion()
-        throw new UnsupportedOperationException();
+        return "2.0";
     }
 
     @Override
     public String getProductName()
     {
-        // TODO CalabashPipelineFactory.getProductName()
-        throw new UnsupportedOperationException();
+        return "XML Calabash";
     }
 
     @Override
     public String getVendor()
     {
-        // TODO CalabashPipelineFactory.getVendor()
-        throw new UnsupportedOperationException();
+        return "Norman Walsh";
     }
 
     @Override
     public String getVendorUri()
     {
-        // TODO CalabashPipelineFactory.getVendorUri()
-        throw new UnsupportedOperationException();
+        return "http://xmlcalabash.com/";
     }
 }
