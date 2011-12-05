@@ -1,0 +1,37 @@
+= JAXProc bindings for Calabash
+
+// vim: set syntax=asciidoc:
+// vim: set spell:
+
+== Purpose
+
+This module contains the https://github.com/herve-quiroz/jaxproc[JAXProc]
+bindings for http://xmlcalabash.com/[XML Calabash].
+
+Due to the licensing of Calabash (GPL 2.0), this module is packaged separately
+from the rest of JAXProc modules.
+
+== Maven configuration
+
+To add XML Calabash to your http://maven.apache.org/[Maven] project, add the
+following to the POM:
+
+----
+
+  <dependencies>
+
+    ...
+
+    <dependency>
+      <groupId>org.trancecode.xproc.jaxproc</groupId>
+      <artifactId>jaxproc-calabash</artifactId>
+      <version>0.9.40_0-SNAPSHOT</version>
+    </dependency>
+
+    ...
+
+  </dependencies>
+
+  ...
+----
+
