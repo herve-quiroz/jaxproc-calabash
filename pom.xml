@@ -5,14 +5,18 @@
 
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>org.trancecode.xproc.jaxproc</groupId>
+    <artifactId>trancecode</artifactId>
+    <version>12</version>
+  </parent>
+
   <groupId>org.trancecode.xproc.jaxproc</groupId>
   <artifactId>jaxproc-calabash</artifactId>
   <version>0.9.40_0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>${project.artifactId}</name>
   <description>JAXProc binding for XML Calabash</description>
-
-  <!-- ===================================================================== -->
 
   <inceptionYear>2011</inceptionYear>
 
@@ -25,7 +29,7 @@
 
   <ciManagement>
     <system>Jenkins</system>
-    <url>http://ci.trancecode.org/jekins/job/jaxproc-calabash</url>
+    <url>http://ci.trancecode.org/job/jaxproc-calabash</url>
   </ciManagement>
 
   <scm>
@@ -34,35 +38,17 @@
     <url>https://github.com/herve-quiroz/jaxproc-calabash</url>
   </scm>
 
-  <!-- ===================================================================== -->
-
   <developers>
 
     <developer>
       <name>Herve Quiroz</name>
       <email>herve.quiroz@trancecode.org</email>
-      <organization>TranceCode</organization>
-      <organizationUrl>http://www.trancecode.org</organizationUrl>
       <timezone>+1</timezone>
     </developer>
 
   </developers>
 
-  <!-- ===================================================================== -->
-
   <repositories>
-
-    <repository>
-      <id>external.trancecode.org</id>
-      <name>TranceCode repository for 3rd party artifacts</name>
-      <url>http://maven.trancecode.org/external/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
 
     <repository>
       <id>releases.trancecode.org</id>
@@ -76,38 +62,7 @@
       </snapshots>
     </repository>
 
-    <repository>
-      <id>snapshots.trancecode.org</id>
-      <name>TranceCode repository for snapshot artifacts</name>
-      <url>http://maven.trancecode.org/snapshots/</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-
   </repositories>
-
-  <!-- ===================================================================== -->
-
-  <distributionManagement>
-
-    <repository>
-      <id>ssh.trancecode.org</id>
-      <url>scpexe://maven@maven.trancecode.org/home/maven/repository/releases/</url>
-    </repository>
-
-    <snapshotRepository>
-      <id>ssh.trancecode.org</id>
-      <url>scpexe://maven@maven.trancecode.org/home/maven/repository/snapshots/</url>
-      <uniqueVersion>false</uniqueVersion>
-    </snapshotRepository>
-
-  </distributionManagement>
-
-  <!-- ===================================================================== -->
 
   <properties>
 
@@ -116,8 +71,6 @@
     <surefire.vm.args />
 
   </properties>
-
-  <!-- ===================================================================== -->
 
   <dependencyManagement>
     <dependencies>
@@ -149,19 +102,7 @@
     </dependencies>
   </dependencyManagement>
 
-  <!-- ===================================================================== -->
-
   <build>
-
-    <extensions>
-
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-ssh-external</artifactId>
-        <version>2.1</version>
-      </extension>
-
-    </extensions>
 
     <pluginManagement>
       <plugins>
@@ -313,8 +254,6 @@
 
   </build>
 
-  <!-- ===================================================================== -->
-
   <dependencies>
 
     <dependency>
@@ -336,7 +275,5 @@
     </dependency>
 
   </dependencies>
-
-  <!-- ===================================================================== -->
 
 </project>
